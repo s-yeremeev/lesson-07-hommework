@@ -10,14 +10,18 @@ do {
                 const rank = prompt("Enter rank")
                 const skill = prompt("Enter skill")
                 const soldat = prompt(ARMS_AVAILABLE)
-
+                
                 switch(soldat){
                     case "engineer" : {
                         const instruments = prompt(ADD_INSTRUMENT)
                         const engineer = new Engineer(firstname, lastname, age, rank, skill, instruments)
-                        console.log(engineer)
+                        console.log(engineer.lastname)
+                        console.log(engineer.lastname)
+                        console.log(engineer.age)
+                        console.log(engineer.rank)
+                        console.log(engineer.skill)
+                        console.log(engineer.instruments)
                         const center = new TrainingCenter().trainingPeople(soldat, engineer)
-                        // center.trainingPeople(soldat)
                         break
                     }
                     case "medic" : {

@@ -12,7 +12,13 @@ class TrainingCenter {
                             age: people.age,
                             instruments: people.instruments
                     })
-                        console.log(engineerArr)
+                        console.log(people.first)
+                        console.log(people.lastname)
+                        console.log(people.age)
+                        console.log(people.rank)
+                        console.log(people.skill)
+                        console.log(people.instruments)
+                        console.table(engineerArr)
                     break
                 }
                 case "medic": {
