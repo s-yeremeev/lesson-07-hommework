@@ -1,8 +1,8 @@
-engineer = []
-medic = []
-sniper = []
-infantryman = []
+engineerArr = []
+medicArr = []
+sniperArr = []
+infantrymanArr = []
 
-company = []
+companyArr = []
 let j = 0
 

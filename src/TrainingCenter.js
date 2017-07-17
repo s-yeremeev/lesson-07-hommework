@@ -3,27 +3,22 @@
 //Чтобы стать военным нужно пройти обучение в специальном ВУЗе или центре
 class TrainingCenter {
     constructor(...props) {
-        this.trainingPeople = function() {
-            const firstname = prompt(ADD_FIRSTNAME)
-            const lastname = prompt(ADD_LASTNAME)
-            const age = prompt(ADD_AGE + " \"" + firstname + " " + lastname + "\"")
-            const arms = prompt(ARMS_AVAILABLE + " \"" + firstname + " " + lastname + "\"")
-
+        this.trainingPeople = function(arms, people) {
             switch(arms){
                 case "engineer":{
-                    const instruments = prompt(ADD_INSTRUMENT + " \"" + firstname + " " + lastname + "\"")
-                    engineer.push({
-                            firstname: firstname,
-                            lastname: lastname,
-                            age: +age,
-                            instruments: instruments
+                    engineerArr.push({
+                            firstname: people.firstname,
+                            lastname: people.lastname,
+                            age: people.age,
+                            instruments: people.instruments
                     })
+                        console.log(engineerArr)
                     break
                 }
                 case "medic": {
-                    const medicine_chest = prompt(ADD_MEDICINE_CHECT + " \"" + firstname + " " + lastname + "\"")
-                    const other_tools = prompt(ADD_OTHER_TOOLS + " \"" + firstname + " " + lastname + "\"")
-                    medic.push({
+                    //const medicine_chest = prompt(ADD_MEDICINE_CHECT + " \"" + firstname + " " + lastname + "\"")
+                   // const other_tools = prompt(ADD_OTHER_TOOLS + " \"" + firstname + " " + lastname + "\"")
+                    medicArr.push({
                             firstname: firstname,
                             lastname: lastname,
                             age: +age,
@@ -33,8 +28,8 @@ class TrainingCenter {
                     break
                 }
                  case "sniper": {
-                    const gun = prompt(ADD_GUN + " \"" + firstname + " " + lastname + "\"")
-                    sniper.push({
+                   // const gun = prompt(ADD_GUN + " \"" + firstname + " " + lastname + "\"")
+                    sniperArr.push({
                             firstname: firstname,
                             lastname: lastname,
                             age: +age,
@@ -43,8 +38,8 @@ class TrainingCenter {
                     break
                 }
                  case "infantryman": {
-                    const automate = prompt(ADD_AUTOMATE + " \"" + firstname + " " + lastname + "\"")
-                    infantryman.push({
+                    //const automate = prompt(ADD_AUTOMATE + " \"" + firstname + " " + lastname + "\"")
+                    infantrymanArr.push({
                             firstname: firstname,
                             lastname: lastname,
                             age: +age,
@@ -61,28 +56,28 @@ class TrainingCenter {
         }
         this.addCompany = function() {
              checkAddComp = function() {
-                            engineer.length >= 2
-                            && medic.length >= 2
-                            && sniper.length >= 1
-                            && infantryman.length >= 5
+                            engineerArr.length >= 2
+                            && medicArr.length >= 2
+                            && sniperArr.length >= 1
+                            && infantrymanArr.length >= 5
             }
             if(checkAddComp) {
                 for(let i =0; i <= 1; i++) {
-                    eng = engineer.pop()
-                    company[j].push(eng)
+                    eng = engineerArr.pop()
+                    companyArr[j].push(eng)
                 }
                 for(let i =0; i <= 1; i++) {
-                    med = medic.pop()
-                    company[j].push(med)
+                    med = medicArr.pop()
+                    companyArr[j].push(med)
                 }
                 for(let i =0; i <= 4; i++) {
-                    inf = infantryman.pop()
-                    company[j].push(inf)
+                    inf = infantrymanArr.pop()
+                    companyArr[j].push(inf)
                 }
-                snip = sniper.pop()
-                company[j].push(sniper)
+                snip = sniperArr.pop()
+                companyArr[j].push(snip)
                 return j++
-                console.log(company[j])
+                console.log(companyArr[j])
             }  else {
             alert("There is not enough military to create a branch.\n" +
                   "There should be 10 people in the department: 2-medica, 1-sniper, 2-engineers, 5-infantryman.\n" +

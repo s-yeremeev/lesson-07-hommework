@@ -5,11 +5,11 @@
  * @param {string} lastname
  * @param {number} age
  */
-class People extends TrainingCenter {
-    constructor(...props) {
-        this.firstname = props[1]
-        this.lastname = props[2]
-        this.age = props[3]
+class People {
+    constructor(firstname, lastname, age) {
+        this.firstname = firstname
+        this.lastname = lastname
+        this.age = age
 
         this.getFirstname = this.getFirstname.bind(this)
         this.getLastname = this.getLastname.bind(this)

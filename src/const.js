@@ -1,4 +1,4 @@
-const ARMS_AVAILABLE = "Enter the military specialty.\nAvailable: engineer, medic, sniper, infantryman."
+const ARMS_AVAILABLE = "Enter the military specialty.\nAvailable: 'engineer', 'medic', 'sniper', 'infantryman'."
 const INCORRECT_AVAILABLE = "This profession is not listed"
 const ADD_FIRSTNAME = "Enter Firstname"
 const ADD_LASTNAME = "Enter Lastname"

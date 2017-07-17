@@ -1,7 +1,7 @@
 class Engineer extends Soldiery {
-    constructor(...props) {
-        super(...props)
-        this.instruments = props[1]
+    constructor(firstname, lastname, age, rank, skill, instruments) {
+        super(firstname, lastname, age, rank, skill)
+        this.instruments = instruments
 
         this.getInstruments = this.getInstruments.bind(this)
 
@@ -14,10 +14,10 @@ class Engineer extends Soldiery {
 
 
 class Medic extends Soldiery {
-    constructor(...props) {
-        super(...props)
-        this.medicine_chest = props[1]
-        this.other_tools = props[1]
+    constructor(firstname, lastname, age, rank, skill, medicine_chest, other_tools) {
+        super(firstname, lastname, age, rank, skill)
+        this.medicine_chest = medicine_chest
+        this.other_tools = other_tools
 
         this.getMedicineChest = this.getMedicineChest.bind(this)
         this.getOtherTools = this.getOtherTools.bind(this)
@@ -34,9 +34,9 @@ class Medic extends Soldiery {
 
 
 class Sniper extends Soldiery {
-    constructor(...props) {
-        super(...props)
-        this.gun = props[1]
+    constructor(firstname, lastname, age, rank, skill, gun) {
+        super(firstname, lastname, age, rank, skill)
+        this.gun = gun
 
         this.getGun = this.getGun.bind(this)
 
@@ -49,9 +49,9 @@ class Sniper extends Soldiery {
 
 
 class Infantryman extends Soldiery {
-    constructor(...props) {
-        super(...props)
-        this.automate = props[1]
+    constructor(firstname, lastname, age, rank, skill, automate) {
+        super(firstname, lastname, age, rank, skill)
+        this.automate = automate
 
         this.getAutomate = this.getAutomate.bind(this)
 

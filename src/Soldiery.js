@@ -6,10 +6,10 @@
  * @param {string} skill
  */
 class Soldiery extends People {
-    constructor(...props) {
-        super(...props)
-        this.rank = props[1]
-        this.skill = props[2]
+    constructor(firstname, lastname, age, rank, skill) {
+        super(firstname, lastname, age)
+        this.rank = rank
+        this.skill = skill
 
         this.getRank = this.getRank.bind(this)
         this.getSkill = this.getSkill.bind(this)
