@@ -42,7 +42,7 @@ class Sniper extends Soldiery {
 
     }
     
-    getWeapon() {
+    getGun() {
         return this.gun
     }
 }

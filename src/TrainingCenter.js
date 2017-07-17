@@ -1,94 +1,82 @@
-//метод для создания отделения
-//В отделении 10 человек из которых: 2-а - медика, 1-н - снайпер, 2-а - инженера, 5-о - пехотинцев. 
-//Чтобы стать военным нужно пройти обучение в специальном ВУЗе или центре
 class TrainingCenter {
     constructor(...props) {
-        this.trainingPeople = function(arms, people) {
-            switch(arms){
-                case "engineer":{
-                    engineerArr.push({
-                            firstname: people.firstname,
-                            lastname: people.lastname,
-                            age: people.age,
-                            instruments: people.instruments
-                    })
-                        console.log(people.first)
-                        console.log(people.lastname)
-                        console.log(people.age)
-                        console.log(people.rank)
-                        console.log(people.skill)
-                        console.log(people.instruments)
-                        console.table(engineerArr)
-                    break
-                }
-                case "medic": {
-                    //const medicine_chest = prompt(ADD_MEDICINE_CHECT + " \"" + firstname + " " + lastname + "\"")
-                   // const other_tools = prompt(ADD_OTHER_TOOLS + " \"" + firstname + " " + lastname + "\"")
-                    medicArr.push({
-                            firstname: firstname,
-                            lastname: lastname,
-                            age: +age,
-                            medicineChest: medicine_chest,
-                            otherTools: other_tools
-                    })
-                    break
-                }
-                 case "sniper": {
-                   // const gun = prompt(ADD_GUN + " \"" + firstname + " " + lastname + "\"")
-                    sniperArr.push({
-                            firstname: firstname,
-                            lastname: lastname,
-                            age: +age,
-                            gun: gun
-                    })
-                    break
-                }
-                 case "infantryman": {
-                    //const automate = prompt(ADD_AUTOMATE + " \"" + firstname + " " + lastname + "\"")
-                    infantrymanArr.push({
-                            firstname: firstname,
-                            lastname: lastname,
-                            age: +age,
-                            automate: automate
-                    })
-                    break
-                }
-                default:{
-                     alert(INCORRECT_AVAILABLE)
-                     break
-                }
-            }
+        this.trainingPeople = function(arms, obj) {
+                    switch(arms){
+                        case "engineer":{
+                            engineerArr.push({
+                                    firstname: obj.firstname,
+                                    lastname: obj.lastname,
+                                    age: obj.age,
+                                    instruments: obj.instruments
+                            })
+                            break
+                        }
+                        case "medic": {
+                            medicArr.push({
+                                    firstname: obj.firstname,
+                                    lastname: obj.lastname,
+                                    age: obj.age,
+                                    medicineChest: obj.medicine_chest,
+                                    otherTools: obj.other_tools
+                            })
+                            break
+                        }
+                        case "sniper": {
+                            sniperArr.push({
+                                    firstname: obj.firstname,
+                                    lastname: obj.lastname,
+                                    age: obj.age,
+                                    gun: obj.gun
+                            })
+                            break
+                        }
+                        case "infantryman": {
+                            infantrymanArr.push({
+                                    firstname: obj.firstname,
+                                    lastname: obj.lastname,
+                                    age: obj.age,
+                                    automate: obj.automate
+                            })
+                            break
+                        }
+                        default:{
+                            alert(INCORRECT_AVAILABLE)
+                            break
+                        }
+                    }
         
         }
+
+
         this.addCompany = function() {
-             checkAddComp = function() {
-                            engineerArr.length >= 2
-                            && medicArr.length >= 2
-                            && sniperArr.length >= 1
-                            && infantrymanArr.length >= 5
-            }
-            if(checkAddComp) {
-                for(let i =0; i <= 1; i++) {
-                    eng = engineerArr.pop()
-                    companyArr[j].push(eng)
-                }
-                for(let i =0; i <= 1; i++) {
-                    med = medicArr.pop()
-                    companyArr[j].push(med)
-                }
-                for(let i =0; i <= 4; i++) {
-                    inf = infantrymanArr.pop()
-                    companyArr[j].push(inf)
-                }
-                snip = sniperArr.pop()
-                companyArr[j].push(snip)
-                return j++
-                console.log(companyArr[j])
-            }  else {
+            if(engineerArr.length >= 2
+                && medicArr.length >= 2
+                && sniperArr.length >= 1
+                && infantrymanArr.length >= 5
+            ) {
+                    for(let i =0; i <= 1; i++) {
+                        const eng = engineerArr.pop()
+                        companyArr.push(eng)
+                    }
+                    for(let i =0; i <= 1; i++) {
+                        const med = medicArr.pop()
+                        companyArr.push(med)
+                    }
+                    for(let i =0; i <= 4; i++) {
+                        const inf = infantrymanArr.pop()
+                        companyArr.push(inf)
+                    }
+                    const snip = sniperArr.pop()
+                    companyArr.push(snip)
+                    const new_vzvod = companyArr.splice(-1, 10)
+
+                    console.log(COMPANY_TABLE)
+                    console.table(new_vzvod)
+                }  else {
             alert("There is not enough military to create a branch.\n" +
                   "There should be 10 people in the department: 2-medica, 1-sniper, 2-engineers, 5-infantryman.\n" +
-                  "In fact you have:" + medic.length + "-medica, "  + sniper.length + "-sniper, "  + engineer.length + "-engineers, "  + infantryman.length + "-infantryman"
-        )
+                  "In fact you have:" + medicArr.length + "-medica, "  + sniperArr.length + "-sniper, "  + engineerArr.length + "-engineers, "  + infantrymanArr.length + "-infantryman"
+            )
             }         
         }
     }
