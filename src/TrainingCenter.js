@@ -50,6 +50,12 @@ class TrainingCenter {
         
         }
 
+        function formationListCompany(arr, j) {
+            for(let i =0; i <= j; i++) {
+                const newArms = arr.pop()
+                companyArr.push(newArms)
+            }
+        }
 
         this.addCompany = function() {
             if(engineerArr.length >= 2
@@ -57,24 +63,14 @@ class TrainingCenter {
                  && sniperArr.length >= 1
                  && infantrymanArr.length >= 5
             ) {
-                    for(let i =0; i <= 1; i++) {
-                        const eng = engineerArr.pop()
-                        companyArr.push(eng)
-                    }
-                    for(let i =0; i <= 1; i++) {
-                        const med = medicArr.pop()
-                        companyArr.push(med)
-                    }
-                    for(let i =0; i <= 4; i++) {
-                        const inf = infantrymanArr.pop()
-                        companyArr.push(inf)
-                    }
-                    const snip = sniperArr.pop()
-                    companyArr.push(snip)
-                    const new_vzvod = companyArr.splice(-10)
-                    alert(COMPANY_TABLE)
-                    console.table(new_vzvod)
-                    return new_vzvod
+                formationListCompany(engineerArr, 1)
+                formationListCompany(medicArr, 1)
+                formationListCompany(infantrymanArr, 4)
+                formationListCompany(sniperArr, 0)                   
+                const new_vzvod = companyArr.splice(-10)
+                alert(COMPANY_TABLE)
+                console.table(new_vzvod)
+                return new_vzvod
                 }  else {
             alert("There is not enough military to create a branch.\n" +
                   "There should be 10 people in the department: 2-medica, 1-sniper, 2-engineers, 5-infantryman.\n" +
