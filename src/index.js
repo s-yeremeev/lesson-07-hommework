@@ -8,7 +8,6 @@ do {
                 const age = +prompt(ADD_AGE)
                 const rank = prompt(ADD_RANK)
                 const skill = prompt(ADD_SKILL)
-
                 const soldat = prompt(ARMS_AVAILABLE)
                 
                 switch(soldat){
@@ -18,7 +17,7 @@ do {
                         const center = new TrainingCenter().trainingPeople(soldat, engineer)
                         break
                     }
-                    case "medic" : {
+                   case "medic" : {
                         const medicine_chest = prompt(ADD_MEDICINE_CHECT)
                         const other_tools = prompt(ADD_OTHER_TOOLS)
                         const medic = new Medic(firstname, lastname, age, rank, skill, medicine_chest, other_tools)
@@ -37,15 +36,15 @@ do {
                         const center = new TrainingCenter().trainingPeople(soldat, infantryman)
                         break
                     }
-                    }
+                }
                 break
         }
         case "addCompany" : {
-             const center = new TrainingCenter().addCompany()
+            const addCompany = new TrainingCenter().addCompany()
             break
         }
         default:{
-            alert(INCORRECT_AVAILABLE)
+            alert("Commands not found")
         break
         }
     }

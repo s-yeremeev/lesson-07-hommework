@@ -1,3 +1,7 @@
+/**
+ * Class Engineer ererbt von Soldiery
+ * @param {string} instruments
+ */
 class Engineer extends Soldiery {
     constructor(firstname, lastname, age, rank, skill, instruments) {
         super(firstname, lastname, age, rank, skill)
@@ -13,6 +17,11 @@ class Engineer extends Soldiery {
 }
 
 
+/**
+ * Class Medic ererbt von Soldiery
+ * @param {string} medicine_chest
+ * @param {string} other_tools
+ */
 class Medic extends Soldiery {
     constructor(firstname, lastname, age, rank, skill, medicine_chest, other_tools) {
         super(firstname, lastname, age, rank, skill)
@@ -33,6 +42,10 @@ class Medic extends Soldiery {
 }
 
 
+/**
+ * Class Sniper ererbt von Soldiery
+ * @param {string} gun
+ */
 class Sniper extends Soldiery {
     constructor(firstname, lastname, age, rank, skill, gun) {
         super(firstname, lastname, age, rank, skill)
@@ -48,6 +61,10 @@ class Sniper extends Soldiery {
 }
 
 
+/**
+ * Class Infantryman ererbt von Soldiery
+ * @param {string} automate
+ */
 class Infantryman extends Soldiery {
     constructor(firstname, lastname, age, rank, skill, automate) {
         super(firstname, lastname, age, rank, skill)

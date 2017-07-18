@@ -1,3 +1,6 @@
+/**
+ * Class 'TrainingCenter' - methods for training people in the military and creating a company
+ */
 class TrainingCenter {
     constructor(...props) {
         this.trainingPeople = function(arms, obj) {
@@ -50,9 +53,9 @@ class TrainingCenter {
 
         this.addCompany = function() {
             if(engineerArr.length >= 2
-                && medicArr.length >= 2
-                && sniperArr.length >= 1
-                && infantrymanArr.length >= 5
+                 && medicArr.length >= 2
+                 && sniperArr.length >= 1
+                 && infantrymanArr.length >= 5
             ) {
                     for(let i =0; i <= 1; i++) {
                         const eng = engineerArr.pop()
@@ -68,10 +71,10 @@ class TrainingCenter {
                     }
                     const snip = sniperArr.pop()
                     companyArr.push(snip)
-                    const new_vzvod = companyArr.splice(-1, 10)
-
-                    console.log(COMPANY_TABLE)
+                    const new_vzvod = companyArr.splice(-10)
+                    alert(COMPANY_TABLE)
                     console.table(new_vzvod)
+                    return new_vzvod
                 }  else {
             alert("There is not enough military to create a branch.\n" +
                   "There should be 10 people in the department: 2-medica, 1-sniper, 2-engineers, 5-infantryman.\n" +
