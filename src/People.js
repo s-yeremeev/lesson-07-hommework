@@ -1,4 +1,3 @@
-//люди имеют имена, фамилии, возраст
 /**
  * Class People. Contains 3 parameters that are inherited by children
  * @param {string} firstname

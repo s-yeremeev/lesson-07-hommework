@@ -1,4 +1,3 @@
-//военные также и звание, и умение воспользоваться оружием
 /**
  * Class Solidery. Has 2 parameters and
  * is also inherited from the class People and uses its capabilities
